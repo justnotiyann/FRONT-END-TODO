@@ -89,12 +89,12 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-  .display_todo {
-    flex-direction: column;
-    overflow: hidden;
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   body {
+//     background-color: lightblue;
+//   }
+//   .display_todo {
+//     flex-direction: column;
+//     overflow: hidden;
+//   }
+// }
