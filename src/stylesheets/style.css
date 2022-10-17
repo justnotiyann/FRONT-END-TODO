@@ -15,45 +15,59 @@ main {
   margin-top: 7em; }
   main .add_todo {
     margin-bottom: 2em; }
-    main .add_todo form button {
-      margin-top: 1em;
-      padding: 0.4em 2em;
-      background-color: goldenrod;
-      border-radius: 5px;
-      box-shadow: 5px 5px black;
-      transition: all 0.3s ease-in-out; }
-      main .add_todo form button:hover {
-        background-color: #ebc975; }
-  main .wrapper {
-    display: flex;
-    background-color: white;
-    padding: 2em;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 2em; }
-    main .wrapper:hover {
-      box-shadow: 10px 10px black; }
-    main .wrapper .display_todo_checkbox {
-      margin-right: 1.2em; }
-      main .wrapper .display_todo_checkbox input[type="checkbox"] {
-        font: inherit;
-        color: currentColor;
-        width: 2em;
-        height: 2em;
-        border: 0.15em solid currentColor;
-        border-radius: 0.15em;
-        transform: translateY(-0.075em); }
-    main .wrapper .display_todo_content_content {
-      color: grey;
-      transition: all 0.3s ease-in-out; }
-      main .wrapper .display_todo_content_content:hover {
-        color: black; }
-      main .wrapper .display_todo_content_content a {
+    main .add_todo form {
+      overflow: hidden; }
+      main .add_todo form button {
+        margin-top: 1em;
+        padding: 0.4em 2em;
         background-color: goldenrod;
-        color: black;
         border-radius: 5px;
-        padding: 0.3em 2em;
-        text-decoration: none; }
+        box-shadow: 5px 5px black;
+        transition: all 0.3s ease-in-out; }
+        main .add_todo form button:hover {
+          background-color: #ebc975; }
+  main .display_todo {
+    margin-bottom: 2em;
+    padding: 2em;
+    overflow: auto;
+    height: 35em; }
+    main .display_todo .wrapper {
+      display: flex;
+      background-color: white;
+      padding: 2em;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 2em; }
+      main .display_todo .wrapper:hover {
+        box-shadow: 10px 10px black; }
+      main .display_todo .wrapper .display_todo_checkbox {
+        margin-right: 1.2em; }
+        main .display_todo .wrapper .display_todo_checkbox input[type="checkbox"] {
+          font: inherit;
+          color: currentColor;
+          width: 2em;
+          height: 2em;
+          border: 0.15em solid currentColor;
+          border-radius: 0.15em;
+          transform: translateY(-0.075em); }
+      main .display_todo .wrapper .display_todo_content_content {
+        color: grey;
+        transition: all 0.3s ease-in-out; }
+        main .display_todo .wrapper .display_todo_content_content:hover {
+          color: black; }
+        main .display_todo .wrapper .display_todo_content_content a {
+          background-color: goldenrod;
+          color: black;
+          border-radius: 5px;
+          padding: 0.3em 2em;
+          text-decoration: none; }
 
 footer {
   text-align: center; }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue; }
+  .display_todo {
+    flex-direction: column;
+    overflow: hidden; } }

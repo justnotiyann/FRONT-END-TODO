@@ -14,7 +14,6 @@ $goldenrod: goldenrod;
 
 body {
   font-family: "Jost", sans-serif;
-
   background-color: rgb(235, 235, 235);
 }
 
@@ -25,6 +24,7 @@ main {
   .add_todo {
     margin-bottom: 2em;
     form {
+      overflow: hidden;
       button {
         margin-top: 1em;
         padding: 0.4em 2em;
@@ -38,41 +38,47 @@ main {
       }
     }
   }
-  .wrapper {
-    display: flex;
-    background-color: white;
-    padding: 2em;
-    border-radius: 10px;
-    @include transision;
-    &:hover {
-      box-shadow: 10px 10px black;
-    }
+  .display_todo {
     margin-bottom: 2em;
-    .display_todo_checkbox {
-      margin-right: 1.2em;
-      input[type="checkbox"] {
-        font: inherit;
-        color: currentColor;
-        width: 2em;
-        height: 2em;
-        border: 0.15em solid currentColor;
-        border-radius: 0.15em;
-        transform: translateY(-0.075em);
+    padding: 2em;
+    overflow: auto;
+    height: 35em;
+    .wrapper {
+      display: flex;
+      background-color: white;
+      padding: 2em;
+      border-radius: 10px;
+      @include transision;
+      &:hover {
+        box-shadow: 10px 10px black;
       }
-    }
-    .display_todo_content {
-      &_content {
-        color: grey;
-        @include transision;
-        &:hover {
-          color: black;
+      margin-bottom: 2em;
+      .display_todo_checkbox {
+        margin-right: 1.2em;
+        input[type="checkbox"] {
+          font: inherit;
+          color: currentColor;
+          width: 2em;
+          height: 2em;
+          border: 0.15em solid currentColor;
+          border-radius: 0.15em;
+          transform: translateY(-0.075em);
         }
-        a {
-          background-color: $goldenrod;
-          color: black;
-          border-radius: 5px;
-          padding: 0.3em 2em;
-          text-decoration: none;
+      }
+      .display_todo_content {
+        &_content {
+          color: grey;
+          @include transision;
+          &:hover {
+            color: black;
+          }
+          a {
+            background-color: $goldenrod;
+            color: black;
+            border-radius: 5px;
+            padding: 0.3em 2em;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -81,4 +87,14 @@ main {
 
 footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .display_todo {
+    flex-direction: column;
+    overflow: hidden;
+  }
 }
