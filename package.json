@@ -1,0 +1,12 @@
+{
+  "name": "front-end-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch scss -o src/stylesheets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
